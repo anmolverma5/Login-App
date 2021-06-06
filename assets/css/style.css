@@ -1,15 +1,15 @@
 .form-control.success input {
   border-color: #2ecc71;
 }
-.form-control.error input {
-  border-color: #e74c3c;
-}
 
 .form-control i {
   position: absolute;
   top: 40px;
   right: 10px;
   visibility: hidden;
+}
+.form-control.error input {
+  border-color: #e74c3c;
 }
 .form-control.success i.fa-check-circle {
   visibility: visible;
