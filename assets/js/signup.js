@@ -1,24 +1,24 @@
-/*const email = document.getElementById('emailid');
-const password = document.getElementById('password');
-const DOB = document.getElementById('DOB');
 const form = document.getElementById('form');
-const errorElement = document.getElementById('error')*/
- // Password Must Contain at Least 8 Characters Long With 1 Uppercase With 1 Lowercase and One Numer
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const emailid = document.getElementById('emailid');
+const password = document.getElementById('password');
+const cpassword = document.getElementById('cpassword');
 
+form.addEventListener('submit', (e) =>{
+     e.preventDefault();
 
-/*form.addEventListener('submit', (e) =>{
-    let messages= []
-    if (email.value === '' || email.value == null){
-        messages.push('Please enter the valid email and Please use @gmail.com or @yahoo.com')
+     checkInputs();
+});
+function  checkInputs(){
+    const fnameValue = fname.value.trim();
+    const lnameValue = lname.value.trim();
+    const emailidValue = emailid.value.trim();
+    const passwordValue = password.value.trim();
+    const cpasswordValue = cpassword.value.trim();
+    if(fnameValue === ''){
+       setErrorFor(fname, 'First name cannot be blank')
+    }else{
+       setSuccessFor(fname);
     }
-    if (password.value.length <= 8 || password.value ){
-        messages.push('Password Must Contain at Least 8 Characters Long With 1 Uppercase With 1 Lowercase and One Numer')
-    }
-
-
-    if (messages.length > 0){
-        e.preventDefault()
-        errorElement.innerText = messages.join(', ')
-    }
-    
-})*/
+}
