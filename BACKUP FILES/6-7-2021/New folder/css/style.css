@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
+
+.navbar navbar-expand-lg navbar-dark bg-dark {
+  margin: 100% !important;
+  align-items: flex-end !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  background-color: #9b59b6 !important;
+  font-family: "Open Sans", sans-serif !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+}
+
+.container {
+  margin: 100px;
+  margin-right: 100px;
+  background-color: #fff !important;
+  border-radius: 5px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  width: 400px !important;
+  max-width: 100% !important;
+}
+
+.header {
+  border-bottom: 1px solid #f0f0f0 !important;
+  background-color: #f7f7f7 !important;
+  padding: 20px 40px !important;
+}
+
+.header h2 {
+  margin: 0 !important;
+}
+
+.form {
+  padding: 30px 40px !important;
+}
+
+.form-control {
+  margin-bottom: 10px !important;
+  padding-bottom: 20px !important;
+  position: relative !important;
+}
+
+.form-control label {
+  display: inline-block !important;
+  margin-bottom: 5px !important;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0 !important;
+  border-radius: 4pxv !important;
+  display: block !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+  width: 100% !important;
+}
+
+.form-control input:focus {
+  outline: 0 !important;
+  border-color: #777 !important;
+}
+
+.form-control.success input {
+  border-color: #2ecc71 !important;
+}
+
+.form-control.error input {
+  border-color: #e74c3c !important;
+}
+
+.form-control i {
+  visibility: hidden !important;
+  position: absolute !important;
+  top: 40px !important;
+  right: 10px !important;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71 !important;
+  visibility: visible !important;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c !important;
+  visibility: visible !important;
+}
+
+.form-control small {
+  color: #e74c3c !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  visibility: hidden !important;
+}
+
+.form-control.error small {
+  visibility: visible !important;
+}
+
+.form button {
+  background-color: #8e44ad !important;
+  border: 2px solid #8e44ad !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  display: block !important;
+  font-family: inherit !important;
+  font-size: 16px !important;
+  padding: 10px !important;
+  margin-top: 20px !important;
+  width: 100% !important;
+}
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+  position: fixed !important;
+  right: 0 !important;
+  bottom: 80px !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.4s ease-in-out !important;
+}
+
+.social-panel-container.visible {
+  transform: translateX(-10px) !important;
+}
+
+.social-panel {
+  background-color: #fff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6) !important;
+  border: 5px solid #001f61 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: "Muli" !important;
+  position: relative !important;
+  height: 169px !important;
+  width: 370px !important;
+  max-width: calc(100% - 10px) !important;
+}
+
+.social-panel button.close-btn {
+  border: 0 !important;
+  color: #97a5ce !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  position: absolute !important;
+  top: 5px !important;
+  right: 5px !important;
+}
+
+.social-panel button.close-btn:focus {
+  outline: none !important;
+}
+
+.social-panel p {
+  background-color: #001f61 !important;
+  border-radius: 0 0 10px 10px !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  padding: 2px 17px 6px !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  margin: 0 !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  width: 235px !important;
+}
+
+.social-panel p i {
+  margin: 0 5px !important;
+}
+
+.social-panel p a {
+  color: #ff7500 !important;
+  text-decoration: none !important;
+}
+
+.social-panel h4 {
+  margin: 20px 0 !important;
+  color: #97a5ce !important;
+  font-family: "Muli" !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  text-transform: uppercase !important;
+}
+
+.social-panel ul {
+  display: flex !important;
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.social-panel ul li {
+  margin: 0 10px !important;
+}
+
+.social-panel ul li a {
+  border: 1px solid #dce1f2 !important;
+  border-radius: 50% !important;
+  color: #001f61 !important;
+  font-size: 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 50px !important;
+  width: 50px !important;
+  text-decoration: none !important;
+}
+
+.social-panel ul li a:hover {
+  border-color: #ff6a00 !important;
+  box-shadow: 0 9px 12px -9px #ff6a00 !important;
+}
+
+.floating-btn {
+  border-radius: 26.5px !important;
+  background-color: #001f61 !important;
+  border: 1px solid #001f61 !important;
+  box-shadow: 0 16px 22px -17px #03153b !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 12px 20px !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 999 !important;
+}
+
+.floating-btn:hover {
+  background-color: #ffffff !important;
+  color: #001f61 !important;
+}
+
+.floating-btn:focus {
+  outline: none !important;
+}
+
+.floating-text {
+  background-color: #001f61 !important;
+  border-radius: 10px 10px 0 0 !important;
+  color: #fff !important;
+  font-family: "Muli" !important;
+  padding: 7px 15px !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  z-index: 998 !important;
+}
+
+.floating-text a {
+  color: #ff7500 !important;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 480px) {
+  .social-panel-container.visible {
+    transform: translateX(0px) !important;
+  }
+
+  .floating-btn {
+    right: 10px !important;
+  }
+}

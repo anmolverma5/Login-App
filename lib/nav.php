@@ -1,23 +1,16 @@
-<!–– NAV BAR CODE FROM BOOTSTRAP -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">HELLO WORLD</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<header class="headernav">
+    <link rel="stylesheet" href="./assets/css/nav.css">
+    <div class="containernavbar">
+        <a href="index.php"><img src="./assets/images/Login-App.png" alt="logo" class="logo">
+            <h1 class="logo"></h1>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signup.php">Signup</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Logout</a>
-                </li>
-        </div>
-    </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="signup.php">Signup</a></li>
+                    <li><a href="login.php">Logout</a></li>
+                </ul>
+            </nav>
+    </div>
+</header>
