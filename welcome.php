@@ -17,6 +17,8 @@ if ($con->connect_error) {
     if ($stmt_result->num_rows > 0) {
         $data = $stmt_result->fetch_assoc();
         if ($data['password'] === $password) {
+            session_start();
+            $_SESSION['loggedin'] = true;
             echo "<h2> Welcome $emailid</h2>";
         } else {
             echo "<h2> Invalid Email or Password</h2>";

@@ -8,30 +8,37 @@ include('./lib/header.php') ?>
     <!–– Connection to navbar -->
         <?php require './lib/nav.php' ?>
         <!–– Login System-->
-            <h2 style="text-align:center;"><b>Login</h2>
-
-            <form action="welcome.php" method="post" name="loginform" onsubmit="return validateForm()">
-                <div class="container">
-                    <label for="uname"><b>Username or Email ID</b></label>
-                    <input type="text" placeholder="Enter Username or Email ID" name="emailid">
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="password">
-
-                    <button type="submit" class="BTN">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
+            <div class="container">
+                <div class="header">
+                    <h2><b> Login </h2>
                 </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-            </form>
-
-
+                <form action="welcome.php" method="post" id="form" class="form">
+                    <div class="form-control">
+                        <label for="username">Email</label>
+                        <input type="text" id="emailid" name="emailid" placeholder="Enter Email Address Or Username" size="18" maxlength=50>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="username">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" id="submit" style="display:none;">
+                        <button type="button" name="submit" value="submit" onclick="return subchk()">Submit</button>
+                    </div>
+                </form>
 </body>
+<!-- Connection of login javascript Validation-->
+<script type="text/javascript" src="./assets/js/login.js"></script>
 <?php include('./lib/footer.php') ?>
+<?php
+if (isset($_GET['Message'])) {
+    echo $_GET['Message'];
+} ?>
 
 </html>

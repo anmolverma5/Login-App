@@ -12,11 +12,11 @@ include('./lib/header.php') ?>
                 <div class="container">
                     <form action="./lib/database.php" id="form" class="form" name="form" method="post">
                         <div class="header">
-                            <h2><b> SignUp </h2>
+                            <h2 style="color:#9b59b6"><b> SignUp </h2>
                         </div>
                         <div class="form-control">
                             <label for="username">First Name</label>
-                            <input type="text" id="fname" name="fname" placeholder="First Name">
+                            <input type="text" id="fname" name="fname" placeholder="First Name" maxlength="20">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
@@ -36,7 +36,7 @@ include('./lib/header.php') ?>
                             <small>Error message</small>
                         </div>
                         <div class="form-control">
-                            <button type="button" id="validation" name="validation" onclick="emailchk()">Email verify</button>
+                            <button type="button" id="validation" name="validation" onclick="return emailchk()" required>Email verify</button>
                         </div>
                         <div class="form-control">
                             <label for="username">Password</label>
@@ -54,18 +54,28 @@ include('./lib/header.php') ?>
                         </div>
                         <div class="form-control">
                             <label for="username">Date of Birth</label>
-                            <input type="date" id="DOB" name="DOB" value="2021-05-22" min="1901-01-01" max="2021-12-31">
+                            <input type="date" id="DOB" name="DOB" value="" min="1901-01-01" max="2021-12-31">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
                         </div>
                         <div class="form-control">
-                            <label for="username">Choose Your Gender</label>
-                            <input type="radio" name="gender" value="male" checked> Male
-                            <input type="radio" name="gender" value="female"> Female
-                            <input type="radio" name="gender" value="other"> Other
+                            <label for="username">Gender</label><br>
+                            <input id="male" name="gender" type="radio" value="Male" class="male" required>
+                            <label>Male</label><br>
+                            <label>Female</label>
+                            <input id="female" name="gender" type="radio" value="Female" class="female">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
                         </div>
                         <div>
-                            <button name="submit" id="submit">submit</button>
+                            <input type="submit" name="submit" id="submit" style="display:none;">
+                            <button type="button" name="submit" value="submit" onclick="return subchk()">Submit</button>
                         </div>
                 </div>
+                <!-- Connection of Sign Up javascript Validation-->
+                <script type="text/javascript" src="./assets/js/signup.js"></script>
 </body>
 <?php include('./lib/footer.php') ?>
 

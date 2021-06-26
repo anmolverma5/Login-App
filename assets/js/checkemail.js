@@ -1,3 +1,6 @@
+
+$a = 'email is fine';
+$b = 'Email already exists';
 function emailchk() {
 
     var emailid = document.getElementById('emailid').value.trim();
@@ -8,15 +11,56 @@ function emailchk() {
     xmlhttp.onreadystatechange = function() {
 
         if (this.readyState == 4 && this.status == 200) {
-
             const response = JSON.parse(xmlhttp.responseText);
             console.log(response);
             if (response.isEmailValid) {
-                alert('email is fine')
-            } else {
-                alert('Email already exists')
+                //setErrorFor(emailid, 'email is fine');
+                setErrorFor(emailid, $a);
+                return false
+            } else {    
+                setSuccessFor(emailid, $b);
+                // setSuccessFor(emailid, 'email is');
+                return false
             }
+        }
+        return true
+    }
+    
 
+    xmlhttp.open("GET", "./lib/checkemail.php?emailid=" + emailid, true);
+    xmlhttp.send();
+}
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+	
+}
+/*function emailchk() {
+
+    var emailid = document.getElementById('emailid').value.trim();
+    if (emailid.length == 0)
+        return;
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+
+        if (this.readyState == 4 && this.status == 200) {
+            const response = JSON.parse(xmlhttp.responseText);
+            console.log(response);
+            if (response.isEmailValid) {
+                alert($b);
+                return false
+            } else {
+                alert($a);
+                return false
+            }
             // if (xmlhttp.responseText === true) {
             //     document.getElementById('emailid').value = '';
             //     alert('Email already exists');
@@ -33,9 +77,11 @@ function emailchk() {
             // console.log(jsonResponse)
             //console.log(this.readyState)
         }
-
+        return true
     }
+    
 
     xmlhttp.open("GET", "./lib/checkemail.php?emailid=" + emailid, true);
     xmlhttp.send();
-}
+}*/
+
