@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
 body {
+  top: 0;
   margin: 0;
   background: #222;
   font-family: "Work Sans", sans-serif;
@@ -7,11 +8,13 @@ body {
 }
 
 .containernavbar {
+  top: 0;
   width: 80%;
   margin: 0 auto;
 }
 
 .headernav {
+  top: 0;
   background: #55d6aa;
 }
 

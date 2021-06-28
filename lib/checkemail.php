@@ -1,6 +1,20 @@
 <?php
-include("database.php");
-$db = new mysqli(
+$conn = mysqli_connect("localhost", "root", "", "index");
+
+if (isset($_POST['email_id'])) {
+    $query = "SELECT * FROM users WHERE emailid='" . $_POST['email_id'] . "'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo '<span class="text-danger" style="color:#e74c3c";>emailid already exists</span>';
+        return false;
+    } else {
+        echo '<span class="text-success" style="color:#2ecc71";>emailid is fine</span>';
+        return false;
+    }
+    return true;
+}
+/*$db = new mysqli(
     'localhost',
     'root',
     '',
@@ -21,7 +35,7 @@ if ($rows) {
 } else {
     $arr = array('isEmailValid' => true);
     echo json_encode($arr);
-}
+}*/
 // var_dump($echeck);
 /*var_dump($echk);
 if ($echk) {

@@ -11,7 +11,7 @@ function subchk() {
 	submitBtn.click()
  }
 }
-function subchk() {
+function checkInputs() {
 	// trim to remove the whitespaces
    const fnameValue = fname.value.trim();
    const lnameValue = lname.value.trim();
@@ -91,4 +91,5 @@ function setSuccessFor(input) {
 function isEmail(emailid) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailid);
 }
+
 

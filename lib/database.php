@@ -191,7 +191,7 @@ if (isset($_POST['submit'])) {
         // $c = $a . $b;
         var_dump($sql);
         $db->query($sql);
-        $Message = urlencode("<p><h1>You Signed Up Succesfully Now You Can Login With Your Registered ID<h1></p>");
+        $Message = urlencode('<p><h1 style="color:#9b59b6";;>You Signed Up Succesfully Now You Can Login With Your Registered ID</h1></p>');
         header("Location: http://localhost/anmol/login-app/login.php?Message=" . $Message);
         $db->close();
     }

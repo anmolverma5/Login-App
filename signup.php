@@ -31,12 +31,13 @@ include('./lib/header.php') ?>
                         <div class="form-control">
                             <label for="username">Email</label>
                             <input type="text" id="emailid" name="emailid" placeholder="Enter Email Address" size="18" maxlength=50>
+                            <span id="availablitiy"></span>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>Error message</small>
                         </div>
-                        <div class="form-control">
-                            <button type="button" id="validation" name="validation" onclick="return emailchk()" required>Email verify</button>
+                        <div class="form-control" hidden>
+                            <button type="button" id="validation" name="validation" onclick="return emailchk()">Email verify</button>
                         </div>
                         <div class="form-control">
                             <label for="username">Password</label>
@@ -76,6 +77,8 @@ include('./lib/header.php') ?>
                 </div>
                 <!-- Connection of Sign Up javascript Validation-->
                 <script type="text/javascript" src="./assets/js/signup.js"></script>
+                <!-- Connection of Email verify javascript Validation-->
+                <script type="text/javascript" src="./assets/js/checkemail.js"></script>
 </body>
 <?php include('./lib/footer.php') ?>
 
