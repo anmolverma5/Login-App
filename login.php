@@ -12,7 +12,7 @@ include('./lib/header.php') ?>
                 <div class="header">
                     <h2><b> Login </h2>
                 </div>
-                <form action="welcome.php" method="post" id="form" class="form">
+                <form action="./lib/sessionstart.php" method="post" id="form" class="form">
                     <div class="form-control">
                         <label for="username">Email</label>
                         <input type="text" id="emailid" name="emailid" placeholder="Enter Email Address Or Username" size="18" maxlength=50>
@@ -33,6 +33,7 @@ include('./lib/header.php') ?>
                     </div>
                 </form>
 </body>
+
 <!-- Connection of login javascript Validation-->
 <script type="text/javascript" src="./assets/js/login.js"></script>
 <?php include('./lib/footer.php') ?>

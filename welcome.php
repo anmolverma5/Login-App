@@ -2,15 +2,7 @@
 <!–– Connection to navbar -->
     <?php require './lib/loginnav.php' ?>
     <?php
-    /*session_start();
-
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
-    header("location : login.php");
-    exit;
-}*/
-    ?>
-    <?php
-    $emailid = $_POST['emailid'];
+    /*    $emailid = $_POST['emailid'];
     $password = $_POST['password'];
     // database connection
     $con = new mysqli('localhost', 'root', '', 'index');
@@ -27,7 +19,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['emailid'] = $emailid;
+                $_SESSION['id'] = $id;
                 echo "<h2> Welcome $emailid</h2>";
+                header("Location: welcome.php");
             } else {
                 echo "<script>alert('Invalid Email or Password')</script>";
                 echo "<script>location.href='login.php'</script>";
@@ -36,11 +30,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             echo "<script>alert('Invalid Email or Password')</script>";
             echo "<script>location.href='login.php'</script>";
         }
+    }*/
+    ?>
+    <?php
+    session_start();
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+        header("location : login.php");
+        exit;
     }
     ?>
 
     <body>
-        welcome -<?php $_SESSION['emailid'] ?>
+        <h1 style="color:#9b59b6;">Welcome - <?php echo $_SESSION['emailid'] ?></h1>
     </body>
     <?php
     include('./lib/config.php');
